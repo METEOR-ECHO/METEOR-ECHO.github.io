@@ -9,7 +9,7 @@
 
 .friend-card {
     background: var(--card-background);
-    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-l1);
     border-radius: 12px;
     padding: 1.5rem;
     display: flex;
@@ -19,14 +19,14 @@
     gap: 1rem;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 5%);
+    /* Simulate border using outline so it doesn't affect layout */
+    outline: 1px solid transparent;
 }
 
 .friend-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 12%);
-    border-color: var(--accent-color);
-    background: linear-gradient(135deg, var(--card-background) 0%, color-mix(in srgb, var(--accent-color) 8%, transparent) 100%);
+    box-shadow: var(--shadow-l2);
+    background: var(--card-background-selected);
 }
 
 .friend-avatar {
@@ -36,13 +36,14 @@
     object-fit: cover;
     flex-shrink: 0;
     background: var(--body-background);
-    border: 2px solid var(--card-border);
+    outline: 2px solid var(--card-separator-color);
+    outline-offset: -1px;
     transition: transform 0.3s ease;
 }
 
 .friend-card:hover .friend-avatar {
     transform: scale(1.1);
-    border-color: var(--accent-color);
+    outline-color: var(--accent-color);
 }
 
 .friend-info {
@@ -73,10 +74,9 @@
 
 .links-notice-card {
     background: var(--card-background);
-    border: 1px solid var(--card-border);
-    border-radius: 16px;
+    border-radius: var(--card-border-radius);
     padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 5%);
+    box-shadow: var(--shadow-l1);
     line-height: 1.8;
     color: var(--card-text-color-main);
 }
@@ -108,16 +108,10 @@
     margin-bottom: 1rem;
 }
 
-/* ========== Dark Mode Overrides ========== */
+/* ========== Dark Mode Refinements ========== */
 
-[data-scheme="dark"] .friend-card {
-    background: rgba(255, 255, 255, 5%);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 20%);
-}
-
-[data-scheme="dark"] .links-notice-card {
-    background: rgba(255, 255, 255, 5%);
-    border-color: rgba(255, 255, 255, 10%);
+[data-scheme="dark"] .friend-card:hover {
+    background: rgba(255, 255, 255, 8%);
 }
 
 /* ========== Responsive ========== */
