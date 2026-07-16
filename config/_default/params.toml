@@ -6,7 +6,6 @@ rssFullContent = true
     customText = "Powered by Hugo & Theme Stack"
 
 [sidebar]
-    emoji    = " meteor"
     avatar   = "https://github.com/METEOR-ECHO.png"
 
 [article]
