@@ -510,31 +510,46 @@ article,
     font-size: 0.9rem !important;
 }
 
-// Homepage
+// Homepage - smaller fonts
 .home-section {
     h1, h2, h3 {
-        font-size: 1.3rem;
-    }
-
-    p {
-        font-size: 1rem;
-        line-height: 1.8;
-    }
-}
-
-// About page
-.page-content {
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    h3 {
         font-size: 1.15rem;
     }
 
+    p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+// About page - smaller fonts
+.page-content {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
     p, li {
-        font-size: 1rem;
-        line-height: 1.8;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+// Homepage article cards - smaller
+.home-section {
+    .article-title a {
+        font-size: 1.3rem !important;
+    }
+
+    .article-subtitle {
+        font-size: 0.95rem !important;
+    }
+
+    .article-meta {
+        font-size: 0.9rem !important;
     }
 }
 
