@@ -160,19 +160,27 @@ article,
         color: var(--body-text-color);
     }
 
-    // Tags/Labels - remove background, keep text only
-    // 标签 - 去掉背景，只保留文字
-    .article-tags a,
-    .article-category a {
+    // Tags container - remove outer border
+    // 标签容器 - 去掉最外层边框
+    .article-tags {
         background: transparent !important;
-        color: var(--accent-color) !important;
-        padding: 0 !important;
         border: none !important;
+        padding: 0 !important;
         box-shadow: none !important;
+        gap: 10px;
+    }
+
+    // Individual tag items - keep border and background
+    // 单个标签 - 保留边框和背景
+    .article-tags a {
+        background: var(--accent-color) !important;
+        color: var(--accent-color-text) !important;
+        padding: 8px 16px !important;
+        border: none !important;
+        border-radius: var(--tag-border-radius) !important;
 
         &:hover {
-            color: var(--accent-color-darker) !important;
-            background: transparent !important;
+            background: var(--accent-color-darker) !important;
         }
     }
 }
