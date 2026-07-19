@@ -510,34 +510,34 @@ article,
     font-size: 0.9rem !important;
 }
 
-// Homepage article cards - smaller fonts
-// 主页文章卡片字体缩小
+// Homepage article cards - medium fonts
+// 主页文章卡片字体适中
 main .article-title {
-    font-size: 1.3rem !important;
+    font-size: 1.45rem !important;
 }
 
 main .article-subtitle {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
 }
 
 main .article-meta {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
 }
 
-// About page - smaller fonts
-// 关于页面字体缩小
+// About page - medium fonts
+// 关于页面字体适中
 main .article-content {
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     h3 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
 
     p, li {
-        font-size: 0.95rem;
-        line-height: 1.7;
+        font-size: 1rem;
+        line-height: 1.8;
     }
 }
 
