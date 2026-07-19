@@ -143,7 +143,7 @@ article,
 // 暗色模式文字可见性修复
 
 :root[data-scheme="dark"] {
-    p, li, td, th, span, div {
+    p, li, td, th, div {
         color: var(--body-text-color);
     }
 
@@ -158,5 +158,18 @@ article,
     blockquote {
         border-left-color: var(--accent-color);
         color: var(--body-text-color);
+    }
+
+    // Tags/Labels visibility fix
+    // 标签/关键字可见性修复
+    span.tag,
+    a.tag,
+    .article-tags a,
+    .article-meta span,
+    .tag-cloud a,
+    [class*="tag"] {
+        color: #e6edf3 !important;
+        background: rgba(88, 166, 255, 0.2) !important;
+        border: 1px solid rgba(88, 166, 255, 0.3);
     }
 }
