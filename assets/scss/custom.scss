@@ -160,17 +160,19 @@ article,
         color: var(--body-text-color);
     }
 
-    // Tags/Labels visibility fix
-    // 标签/关键字可见性修复
-    span.tag,
-    a.tag,
+    // Tags/Labels - remove background, keep text only
+    // 标签 - 去掉背景，只保留文字
     .article-tags a,
-    .article-meta span,
-    .tag-cloud a,
-    [class*="tag"] {
-        color: #e6edf3 !important;
+    .article-category a {
         background: transparent !important;
-        border: none !important;
+        color: var(--accent-color) !important;
         padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+
+        &:hover {
+            color: var(--accent-color-darker) !important;
+            background: transparent !important;
+        }
     }
 }
