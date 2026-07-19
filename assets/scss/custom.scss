@@ -489,3 +489,40 @@ article,
     margin: 0;
     line-height: 1.7;
 }
+
+// Homepage, Links, About - smaller fonts
+// 主页、友链、关于页面字体缩小
+.home-section,
+.links-page,
+.links-grid,
+.friend-card,
+.links-notice-card,
+.page-content {
+    font-size: 0.95rem;
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+.friend-name {
+    font-size: 1rem !important;
+}
+
+.friend-desc {
+    font-size: 0.85rem !important;
+}
+
+.article-tags a {
+    font-size: 0.85rem;
+    padding: 6px 12px !important;
+}
