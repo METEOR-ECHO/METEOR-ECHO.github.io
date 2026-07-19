@@ -3,34 +3,34 @@
 
 :root[data-scheme="dark"] {
     // 背景色 - 深邃蓝黑
-    --body-background: #0d1117;
+    --body-background: #0f1219;
 
     // 强调色 - 科技蓝
     --accent-color: #58a6ff;
     --accent-color-darker: #1f6feb;
     --accent-color-text: #fff;
 
-    // 正文颜色
-    --body-text-color: rgba(201, 210, 220, 0.85);
+    // 正文颜色 - 确保可见
+    --body-text-color: #c9d2dc;
 
-    // 卡片样式 - 深灰蓝
-    --card-background: #161b22;
-    --card-background-selected: rgba(56, 68, 84, 0.5);
+    // 卡片样式 - 提亮卡片，增加对比
+    --card-background: #1c2333;
+    --card-background-selected: #252d3f;
     --card-text-color-main: #e6edf3;
-    --card-text-color-secondary: #8b949e;
-    --card-text-color-tertiary: #6e7681;
-    --card-separator-color: rgba(48, 54, 61, 0.8);
+    --card-text-color-secondary: #9aa5b4;
+    --card-text-color-tertiary: #7d8590;
+    --card-separator-color: rgba(99, 110, 126, 0.4);
 
     // 代码块
-    --code-background-color: #1c2128;
+    --code-background-color: #1a1f2b;
     --code-text-color: #e6edf3;
 
     // 表格
-    --table-border-color: #30363d;
-    --tr-even-background-color: #161b22;
+    --table-border-color: #3d444d;
+    --tr-even-background-color: #1c2333;
 
     // 引用块
-    --blockquote-background-color: #161b22;
+    --blockquote-background-color: #1c2333;
 
     // 链接
     --link-background-color: 56, 139, 253;
@@ -38,11 +38,32 @@
     --link-background-opacity-hover: 0.25;
 
     // Mermaid
-    --mermaid-toolbar-btn-bg: rgba(22, 27, 34, 0.95);
+    --mermaid-toolbar-btn-bg: rgba(28, 35, 51, 0.95);
     --mermaid-toolbar-btn-text: #e6edf3;
-    --mermaid-modal-content-bg: #0d1117;
-    --mermaid-modal-btn-bg: #21262d;
-    --mermaid-modal-btn-hover: #30363d;
+    --mermaid-modal-content-bg: #0f1219;
+    --mermaid-modal-btn-bg: #252d3f;
+    --mermaid-modal-btn-hover: #2d3748;
+
+    // Sidebar
+    --sidebar-background: #161c28;
+}
+
+// Global dark mode card visibility fix
+// 全局卡片可见性修复
+
+.card,
+article,
+.widget,
+.friends-widget,
+.archive-list,
+.list-item,
+.section {
+    background: var(--card-background);
+    border: 1px solid rgba(139, 148, 158, 0.15);
+
+    :root[data-scheme="dark"] & {
+        border: 1px solid rgba(139, 148, 158, 0.2);
+    }
 }
 
 // Links Page Styles
@@ -61,14 +82,16 @@
     padding: 20px;
     background: var(--card-background);
     border-radius: var(--card-border-radius);
-    box-shadow: var(--shadow-l1);
+    border: 1px solid rgba(139, 148, 158, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: var(--shadow-l2);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        border-color: var(--accent-color);
     }
 }
 
@@ -79,6 +102,7 @@
     object-fit: cover;
     margin-right: 15px;
     flex-shrink: 0;
+    border: 2px solid rgba(139, 148, 158, 0.2);
 }
 
 .friend-info {
@@ -110,10 +134,29 @@
     background: var(--card-background);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
-    box-shadow: var(--shadow-l1);
+    border: 1px solid rgba(139, 148, 158, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
+}
 
-    :root[data-scheme="dark"] & {
-        border: 1px solid rgba(255, 255, 255, 0.1);
+// Text visibility fix for dark mode
+// 暗色模式文字可见性修复
+
+:root[data-scheme="dark"] {
+    p, li, td, th, span, div {
+        color: var(--body-text-color);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #e6edf3;
+    }
+
+    a {
+        color: var(--accent-color);
+    }
+
+    blockquote {
+        border-left-color: var(--accent-color);
+        color: var(--body-text-color);
     }
 }
