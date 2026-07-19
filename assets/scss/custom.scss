@@ -490,39 +490,72 @@ article,
     line-height: 1.7;
 }
 
-// Homepage, Links, About - smaller fonts
-// 主页、友链、关于页面字体缩小
-.home-section,
-.links-page,
-.links-grid,
-.friend-card,
-.links-notice-card,
-.page-content {
-    font-size: 0.95rem;
+// Homepage, Links, About - adjusted fonts
+// 主页、友链、关于页面字体调整
 
-    h2 {
-        font-size: 1.2rem;
-    }
+// Links page
+.links-page {
+    .links-notice-card {
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
 
-    h3 {
-        font-size: 1.05rem;
-    }
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
 
-    p {
-        font-size: 0.95rem;
-        line-height: 1.7;
+        li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: var(--card-text-color-main);
+        }
     }
 }
 
 .friend-name {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
 }
 
 .friend-desc {
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;
 }
 
+// Homepage
+.home-section {
+    h1, h2, h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+// About page
+.page-content {
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    p, li {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+// Tags slightly smaller
 .article-tags a {
-    font-size: 0.85rem;
-    padding: 6px 12px !important;
+    font-size: 0.9rem;
+    padding: 6px 14px !important;
 }
