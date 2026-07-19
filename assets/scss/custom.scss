@@ -510,20 +510,23 @@ article,
     font-size: 0.9rem !important;
 }
 
-// Homepage - smaller fonts
-.home-section {
-    h1, h2, h3 {
-        font-size: 1.15rem;
-    }
+// Homepage article cards - smaller fonts
+// 主页文章卡片字体缩小
+main .article-title {
+    font-size: 1.3rem !important;
+}
 
-    p {
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
+main .article-subtitle {
+    font-size: 0.95rem !important;
+}
+
+main .article-meta {
+    font-size: 0.9rem !important;
 }
 
 // About page - smaller fonts
-.page-content {
+// 关于页面字体缩小
+main .article-content {
     h2 {
         font-size: 1.2rem;
     }
@@ -535,21 +538,6 @@ article,
     p, li {
         font-size: 0.95rem;
         line-height: 1.7;
-    }
-}
-
-// Homepage article cards - smaller
-.home-section {
-    .article-title a {
-        font-size: 1.3rem !important;
-    }
-
-    .article-subtitle {
-        font-size: 0.95rem !important;
-    }
-
-    .article-meta {
-        font-size: 0.9rem !important;
     }
 }
 
