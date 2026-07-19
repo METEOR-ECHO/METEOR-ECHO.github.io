@@ -314,6 +314,50 @@ article,
     }
 }
 
+// Light mode category cards - 浅色系
+:root[data-scheme="light"] {
+    .category-bg {
+        background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf8 50%, #c8e3f5 100%) !important;
+
+        &::before {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px) !important;
+        }
+
+        &::after {
+            background-image:
+                radial-gradient(circle, rgba(52, 152, 219, 0.1) 1px, transparent 1px) !important;
+        }
+    }
+
+    .cat-bg-2 {
+        background: linear-gradient(135deg, #e8f8f0 0%, #d4f5e8 50%, #c8f0e0 100%) !important;
+
+        &::after {
+            background-image:
+                radial-gradient(circle, rgba(46, 204, 113, 0.1) 1px, transparent 1px) !important;
+        }
+    }
+
+    .cat-bg-3 {
+        background: linear-gradient(135deg, #f3e8fc 0%, #e8d4f8 50%, #e0c8f5 100%) !important;
+
+        &::after {
+            background-image:
+                radial-gradient(circle, rgba(155, 89, 182, 0.1) 1px, transparent 1px) !important;
+        }
+    }
+
+    .category-name {
+        color: #2c3e50 !important;
+    }
+
+    .category-count {
+        color: rgba(44, 62, 80, 0.7) !important;
+    }
+}
+
 .category-content {
     position: relative;
     z-index: 1;
@@ -331,38 +375,41 @@ article,
     color: rgba(255, 255, 255, 0.7);
 }
 
-// Category card variations with pixel pattern
-.cat-bg-2 {
-    background: linear-gradient(135deg, #1a4a3c 0%, #0d3728 50%, #164040 100%) !important;
+// Category card variations with pixel pattern - Dark mode only
+// 暗色模式下保持深色
+:root[data-scheme="dark"] {
+    .cat-bg-2 {
+        background: linear-gradient(135deg, #1a4a3c 0%, #0d3728 50%, #164040 100%) !important;
 
-    &::before {
-        background-image:
-            linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) !important;
-        background-size: 6px 6px !important;
+        &::before {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) !important;
+            background-size: 6px 6px !important;
+        }
+
+        &::after {
+            background-image:
+                radial-gradient(circle, rgba(63, 185, 80, 0.15) 1px, transparent 1px) !important;
+            background-size: 12px 12px !important;
+        }
     }
 
-    &::after {
-        background-image:
-            radial-gradient(circle, rgba(63, 185, 80, 0.15) 1px, transparent 1px) !important;
-        background-size: 12px 12px !important;
-    }
-}
+    .cat-bg-3 {
+        background: linear-gradient(135deg, #3a1a5c 0%, #250d47 50%, #301650 100%) !important;
 
-.cat-bg-3 {
-    background: linear-gradient(135deg, #3a1a5c 0%, #250d47 50%, #301650 100%) !important;
+        &::before {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) !important;
+            background-size: 6px 6px !important;
+        }
 
-    &::before {
-        background-image:
-            linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) !important;
-        background-size: 6px 6px !important;
-    }
-
-    &::after {
-        background-image:
-            radial-gradient(circle, rgba(132, 80, 223, 0.15) 1px, transparent 1px) !important;
-        background-size: 12px 12px !important;
+        &::after {
+            background-image:
+                radial-gradient(circle, rgba(132, 80, 223, 0.15) 1px, transparent 1px) !important;
+            background-size: 12px 12px !important;
+        }
     }
 }
 
