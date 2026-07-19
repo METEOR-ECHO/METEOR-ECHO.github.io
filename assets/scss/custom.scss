@@ -316,6 +316,15 @@ article,
     color: rgba(255, 255, 255, 0.7);
 }
 
+// Category card variations
+.cat-bg-2 {
+    background: linear-gradient(135deg, #1a4a3c 0%, #0d3728 50%, #164040 100%) !important;
+}
+
+.cat-bg-3 {
+    background: linear-gradient(135deg, #3a1a5c 0%, #250d47 50%, #301650 100%) !important;
+}
+
 // Posts Section
 .posts-section {
     margin-bottom: 40px;
@@ -341,7 +350,7 @@ article,
 
 .post-link {
     display: block;
-    padding: 20px;
+    padding: 24px;
     text-decoration: none;
     color: inherit;
 }
@@ -349,11 +358,11 @@ article,
 .post-info {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .post-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--card-text-color-main);
     margin: 0;
@@ -368,7 +377,7 @@ article,
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--card-text-color-secondary);
 }
 
@@ -381,14 +390,14 @@ article,
 .post-category {
     background: rgba(88, 166, 255, 0.15);
     color: var(--accent-color);
-    padding: 4px 10px;
+    padding: 4px 12px;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .post-desc {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--card-text-color-secondary);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
