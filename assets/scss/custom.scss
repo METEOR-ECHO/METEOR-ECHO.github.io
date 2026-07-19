@@ -5,9 +5,9 @@
     // 背景色 - 深邃蓝黑
     --body-background: #0f1219;
 
-    // 强调色 - 深邃蓝
-    --accent-color: #1a5276;
-    --accent-color-darker: #154360;
+    // 强调色 - 亮蓝（用于链接）
+    --accent-color: #58a6ff;
+    --accent-color-darker: #1f6feb;
     --accent-color-text: #fff;
 
     // 正文颜色 - 确保可见
@@ -170,17 +170,18 @@ article,
         gap: 10px;
     }
 
-    // Individual tag items - keep border and background
-    // 单个标签 - 保留边框和背景
+    // Individual tag items - dark blue background
+    // 单个标签 - 深蓝色背景
     .article-tags a {
-        background: var(--accent-color) !important;
-        color: var(--accent-color-text) !important;
+        background: #1a3a5c !important;
+        color: #a8d4f0 !important;
         padding: 8px 16px !important;
         border: none !important;
         border-radius: var(--tag-border-radius) !important;
 
         &:hover {
-            background: var(--accent-color-darker) !important;
+            background: #1e4a6e !important;
+            color: #c8e4ff !important;
         }
     }
 }
