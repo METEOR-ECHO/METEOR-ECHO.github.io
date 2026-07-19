@@ -541,6 +541,43 @@ main .article-content {
     }
 }
 
+// Article post page - same as other pages
+// 文章详情页字体与其他页面一致
+.article-page main .article-content {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p, li, td, th {
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+
+    code {
+        font-size: 1rem;
+    }
+
+    pre code {
+        font-size: 0.95rem;
+    }
+
+    blockquote {
+        font-size: 1.1rem;
+    }
+
+    table {
+        font-size: 1rem;
+    }
+}
+
 // Tags slightly smaller
 .article-tags a {
     font-size: 0.9rem;
