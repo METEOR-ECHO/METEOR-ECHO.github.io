@@ -185,3 +185,210 @@ article,
         }
     }
 }
+
+// Articles Page Styles
+// 文章页面样式
+
+.articles-page {
+    max-width: 100%;
+}
+
+// Search Section
+.search-section {
+    margin-bottom: 40px;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    color: var(--card-text-color-secondary);
+}
+
+.search-input {
+    width: 100%;
+    padding: 16px 16px 16px 50px;
+    font-size: 1.1rem;
+    background: var(--card-background);
+    border: 1px solid rgba(139, 148, 158, 0.2);
+    border-radius: var(--card-border-radius);
+    color: var(--card-text-color-main);
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+    }
+
+    &::placeholder {
+        color: var(--card-text-color-tertiary);
+    }
+}
+
+.search-results {
+    margin-top: 12px;
+}
+
+.search-count {
+    font-size: 0.9rem;
+    color: var(--card-text-color-secondary);
+}
+
+// Categories Section
+.categories-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--card-text-color-main);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(88, 166, 255, 0.3);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.category-card {
+    position: relative;
+    padding: 24px 20px;
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+        .category-bg {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.category-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1a3a5c 0%, #0d2137 50%, #162d50 100%);
+    transition: transform 0.5s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2358a6ff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.5;
+    }
+}
+
+.category-content {
+    position: relative;
+    z-index: 1;
+}
+
+.category-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.category-count {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+// Posts Section
+.posts-section {
+    margin-bottom: 40px;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post-item {
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid rgba(139, 148, 158, 0.15);
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.post-link {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--card-text-color-main);
+    margin: 0;
+    transition: color 0.3s ease;
+
+    .post-item:hover & {
+        color: var(--accent-color);
+    }
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.9rem;
+    color: var(--card-text-color-secondary);
+}
+
+.post-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-category {
+    background: rgba(88, 166, 255, 0.15);
+    color: var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.post-desc {
+    font-size: 0.95rem;
+    color: var(--card-text-color-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
