@@ -18,14 +18,18 @@
     <section class="categories-section">
         <h2 class="section-title">文章分类</h2>
         <div class="categories-grid">
-            {{ range .Site.Terms.categories }}
-            <a href="{{ .Page.Permalink }}" class="category-card">
+            {{ range .Site.Sections }}
+            {{ if eq .Section "categories" }}
+            {{ range .Pages }}
+            <a href="{{ .Permalink }}" class="category-card">
                 <div class="category-bg"></div>
                 <div class="category-content">
-                    <h3 class="category-name">{{ .Page.Title }}</h3>
+                    <h3 class="category-name">{{ .Title }}</h3>
                     <span class="category-count">{{ len .Pages }} 篇文章</span>
                 </div>
             </a>
+            {{ end }}
+            {{ end }}
             {{ end }}
         </div>
     </section>
