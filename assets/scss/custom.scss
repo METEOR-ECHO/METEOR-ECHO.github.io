@@ -578,6 +578,30 @@ main .article-content {
     }
 }
 
+// Articles list page
+// 文章列表页面
+.template-articles {
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .post-title {
+        font-size: 1.4rem !important;
+    }
+
+    .post-meta {
+        font-size: 1rem !important;
+    }
+
+    .post-desc {
+        font-size: 1.05rem !important;
+    }
+
+    .category-name {
+        font-size: 1.3rem !important;
+    }
+}
+
 // Tags slightly smaller
 .article-tags a {
     font-size: 0.9rem;
